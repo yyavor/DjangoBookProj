@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from djbook.views import hello, current_date, current_date_with_offset
+from djbook.views import hello, current_date, current_date_with_offset, contact
 
 urlpatterns = [
     url(r'^$', hello),
@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^hello/$', hello),
     url(r'^current-date/$', current_date),
     url(r'^current-date/plus/(\d{1,2})$', current_date_with_offset),
+    url(r'^contact/$', contact),
     url(r'^', include('books.urls')),
 ]
